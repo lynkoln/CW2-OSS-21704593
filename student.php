@@ -27,7 +27,7 @@ if (isset($_SESSION['id'])) {
    $sql = "select * from student;";
    $result = mysqli_query($conn,$sql);
 
-   echo "<div class='col-md-2 col-md-offset-5'>";
+   echo "<div class='col-md-2' style='margin-left:30%' >";
    echo "<table class='table'>";
    echo "<tr>";
    echo "<th>*</th><th>Firstname</th> <th>Lastname</th> <th>House</th> <th>Town</th> <th>County</th> <th>Country</th> <th>Postcode</th>";

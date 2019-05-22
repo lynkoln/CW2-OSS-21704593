@@ -23,7 +23,7 @@ if (isset($_SESSION['id'])) {
    echo template("templates/partials/header.php");
    echo template("templates/partials/nav.php");
 
-echo '<div class="col-md-2 col-md-offset-5"><form action ="addstudent.php" method="post">
+echo '<div class="col-md-2 col-md-offset-5" style="margin-left:40%"><form action ="addstudent.php" method="post">
     <table class="table center">
       <tr><td>Student ID: </td><td><input type="text" name="Student[]"></td></tr>
       <tr><td>Password: </td><td><input type="password" name="Student[]"></td></tr>

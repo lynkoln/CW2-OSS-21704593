@@ -23,7 +23,7 @@ if (isset($_SESSION['id'])) {
      // Build sql statment that selects all the modules
      $sql = "select * from module";
      $result = mysqli_query($conn, $sql);
-     $data['content'] .= "<div class='col-md-2 col-md-offset-5' style='margin-left:2%;';></br>";
+     $data['content'] .= "<div class='col-md-2 col-md-offset-5' style='margin-left:2%; margin:auto';></br>";
      $data['content'] .= "<form name='frmassignmodule' action='' method='post' >";
      $data['content'] .= "Select a module to assign<br/>";
      $data['content'] .= "<select class='browser-default custom-select' name='selmodule' >";
@@ -32,7 +32,7 @@ if (isset($_SESSION['id'])) {
         $data['content'] .= "<option value='$row[modulecode]'>$row[name]</option>";
      }
      $data['content'] .= "</select><br/>";
-     $data['content'] .= "</div><input type='submit' style='margin-left:2%' class='btn btn-dark' name='confirm' value='Save' />";
+     $data['content'] .= "<input type='submit' class='btn btn-dark' name='confirm' value='Save' /></div>";
      $data['content'] .= "</form>";
 
    }

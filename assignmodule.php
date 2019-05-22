@@ -23,17 +23,18 @@ if (isset($_SESSION['id'])) {
      // Build sql statment that selects all the modules
      $sql = "select * from module";
      $result = mysqli_query($conn, $sql);
-
+     $data['content'] .= "<div class='col-md-2 col-md-offset-5' style='margin-left:2%;';></br>";
      $data['content'] .= "<form name='frmassignmodule' action='' method='post' >";
      $data['content'] .= "Select a module to assign<br/>";
-     $data['content'] .= "<select name='selmodule' >";
+     $data['content'] .= "<select class='browser-default custom-select' name='selmodule' >";
      // Display the module name sin a drop down selection box
      while($row = mysqli_fetch_array($result)) {
         $data['content'] .= "<option value='$row[modulecode]'>$row[name]</option>";
      }
      $data['content'] .= "</select><br/>";
-     $data['content'] .= "<input type='submit' name='confirm' value='Save' />";
+     $data['content'] .= "</div><input type='submit' style='margin-left:2%' class='btn btn-dark' name='confirm' value='Save' />";
      $data['content'] .= "</form>";
+
    }
 
    // render the template

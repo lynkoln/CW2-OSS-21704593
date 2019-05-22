@@ -27,8 +27,8 @@ if (isset($_SESSION['id'])) {
    $sql = "select * from student;";
    $result = mysqli_query($conn,$sql);
 
-
-   echo "<table>";
+   echo "<div class='col-md-2 col-md-offset-5'>";
+   echo "<table class='table'>";
    echo "<tr>";
    echo "<th>*</th><th>Firstname</th> <th>Lastname</th> <th>House</th> <th>Town</th> <th>County</th> <th>Country</th> <th>Postcode</th>";
    echo "<form action='student.php' method='post'>";
@@ -47,8 +47,9 @@ if (isset($_SESSION['id'])) {
    }
 
    echo "</table>";
-   echo "<input type='submit' value='Delete'>";
+   echo "<input type='submit' class='btn btn-dark' value='Delete'>";
     echo "</form>";
+    echo "</div>";
 
 
 }

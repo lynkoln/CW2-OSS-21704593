@@ -39,26 +39,29 @@ if (isset($_SESSION['id'])) {
       // see http://stackoverflow.com/questions/6924193/what-is-the-use-of-eod-in-php for info
       // also http://stackoverflow.com/questions/8280360/formatting-an-array-value-inside-a-heredoc
       $data['content'] = <<<EOD
-
-   <h2>My Details</h2>
+<div class="col-md-2 col-md-offset-5">
+<h2>My Details</h2>
+<table class="table">
    <form name="frmdetails" action="" method="post">
-   First Name :
-   <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/>
-   Surname :
-   <input name="txtlastname" type="text"  value="{$row['lastname']}" /><br/>
-   Number and Street :
-   <input name="txthouse" type="text"  value="{$row['house']}" /><br/>
-   Town :
-   <input name="txttown" type="text"  value="{$row['town']}" /><br/>
-   County :
-   <input name="txtcounty" type="text"  value="{$row['county']}" /><br/>
-   Country :
-   <input name="txtcountry" type="text"  value="{$row['country']}" /><br/>
-   Postcode :
-   <input name="txtpostcode" type="text"  value="{$row['postcode']}" /><br/>
-   <input type="submit" value="Save" name="submit"/>
-   </form>
+   <tr><td>Firstname:</td>
+   <td><input name="txtfirstname" type="text" value="{$row['firstname']}" /></td></tr>
+   <tr><td>Surname:</td>
+   <td><input name="txtlastname" type="text"  value="{$row['lastname']}" /></td></tr>
+   <tr><td>House:</td>
+   <td><input name="txthouse" type="text"  value="{$row['house']}" /></td></tr>
+   <tr><td>Town:</td>
+   <td><input name="txttown" type="text"  value="{$row['town']}" /></td></tr>
+   <tr><td>County:</td>
+   <td><input name="txtcounty" type="text"  value="{$row['county']}" /></td></tr>
+   <tr><td>Country:</td>
+   <td><input name="txtcountry" type="text"  value="{$row['country']}" /></td></tr>
+   <tr><td>Postcode:</td>
+   <td><input name="txtpostcode" type="text"  value="{$row['postcode']}" /></td></tr>
 
+   </table>
+   <input type="submit" class="btn btn-dark" value="Save" name="submit"/>
+   </form>
+</div>
 EOD;
 
    }

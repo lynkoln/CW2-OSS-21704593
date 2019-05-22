@@ -17,7 +17,8 @@
       $result = mysqli_query($conn,$sql);
 
       // prepare page content
-      $data['content'] .= "<table border='1'>";
+      $data['content'] .= "<div class='col-md-2 col-md-offset-5' style='margin-top:2%'>";
+      $data['content'] .= "<table border='1' class='table'>";
       $data['content'] .= "<tr><th colspan='5' align='center'>Modules</th></tr>";
       $data['content'] .= "<tr><th>Code</th><th>Type</th><th>Level</th></tr>";
       // Display the modules within the html table
